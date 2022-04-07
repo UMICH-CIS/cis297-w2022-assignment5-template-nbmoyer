@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1758
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksExamples", "BooksExamples\BooksExamples.csproj", "{82B67151-4980-476C-B36C-EA0571AC5C4C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayTable", "DisplayTable\DisplayTable.csproj", "{8EB7CA3B-EE25-4762-864A-F1040C0B9F7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Display titles", "Display titles\Display titles.csproj", "{B914B802-D60D-402F-ADAD-26793D7AE10C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Join queries", "Join queries\Join queries.csproj", "{B069A431-A836-4ABF-BDCA-BA526573A21A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8EB7CA3B-EE25-4762-864A-F1040C0B9F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EB7CA3B-EE25-4762-864A-F1040C0B9F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EB7CA3B-EE25-4762-864A-F1040C0B9F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B914B802-D60D-402F-ADAD-26793D7AE10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B914B802-D60D-402F-ADAD-26793D7AE10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B914B802-D60D-402F-ADAD-26793D7AE10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B914B802-D60D-402F-ADAD-26793D7AE10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B069A431-A836-4ABF-BDCA-BA526573A21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B069A431-A836-4ABF-BDCA-BA526573A21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B069A431-A836-4ABF-BDCA-BA526573A21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B069A431-A836-4ABF-BDCA-BA526573A21A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
