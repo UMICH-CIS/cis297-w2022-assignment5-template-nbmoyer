@@ -57,5 +57,15 @@ namespace DisplayTable
                 MessageBox.Show("FirstName and LastName must contain values", "Entity Validation Exception");
             }
         }
+
+        private void lastNameSearchButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lastNameSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

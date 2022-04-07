@@ -31,27 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayAuthorsTable));
             this.authorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.authorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.authorDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lastNameSearchBox = new System.Windows.Forms.TextBox();
+            this.lastNameSearchButton = new System.Windows.Forms.Button();
+            this.SearchBoxLable = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingNavigator)).BeginInit();
             this.authorBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.authorDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // authorBindingNavigator
@@ -80,11 +83,41 @@
             this.authorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.authorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.authorBindingNavigator.Name = "authorBindingNavigator";
+            this.authorBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.authorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.authorBindingNavigator.Size = new System.Drawing.Size(1769, 43);
+            this.authorBindingNavigator.Size = new System.Drawing.Size(758, 43);
             this.authorBindingNavigator.TabIndex = 0;
             this.authorBindingNavigator.Text = "bindingNavigator1";
             this.authorBindingNavigator.RefreshItems += new System.EventHandler(this.authorBindingNavigator_RefreshItems);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(40, 40);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // authorBindingSource
+            // 
+            this.authorBindingSource.DataSource = typeof(BooksExamples.Author);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 40);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(40, 40);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -113,21 +146,15 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 43);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(24, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(79, 40);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 43);
             // 
             // bindingNavigatorMoveNextItem
@@ -150,26 +177,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 43);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(40, 40);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(40, 40);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // authorBindingNavigatorSaveItem
             // 
@@ -191,9 +200,10 @@
             this.authorDataGridView.DataSource = this.authorBindingSource;
             this.authorDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.authorDataGridView.Location = new System.Drawing.Point(0, 43);
+            this.authorDataGridView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.authorDataGridView.Name = "authorDataGridView";
             this.authorDataGridView.RowTemplate.Height = 37;
-            this.authorDataGridView.Size = new System.Drawing.Size(1769, 589);
+            this.authorDataGridView.Size = new System.Drawing.Size(758, 240);
             this.authorDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -202,7 +212,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "AuthorID";
             this.dataGridViewTextBoxColumn1.HeaderText = "AuthorID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 154;
+            this.dataGridViewTextBoxColumn1.Width = 74;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -210,7 +220,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "FirstName";
             this.dataGridViewTextBoxColumn2.HeaderText = "FirstName";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 174;
+            this.dataGridViewTextBoxColumn2.Width = 79;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -218,26 +228,53 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "LastName";
             this.dataGridViewTextBoxColumn3.HeaderText = "LastName";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 171;
+            this.dataGridViewTextBoxColumn3.Width = 80;
             // 
-            // authorBindingSource
+            // lastNameSearchBox
             // 
-            this.authorBindingSource.DataSource = typeof(BooksExamples.Author);
+            this.lastNameSearchBox.Location = new System.Drawing.Point(400, 13);
+            this.lastNameSearchBox.Name = "lastNameSearchBox";
+            this.lastNameSearchBox.Size = new System.Drawing.Size(149, 20);
+            this.lastNameSearchBox.TabIndex = 2;
+            this.lastNameSearchBox.TextChanged += new System.EventHandler(this.lastNameSearchBox_TextChanged);
+            // 
+            // lastNameSearchButton
+            // 
+            this.lastNameSearchButton.Location = new System.Drawing.Point(555, 10);
+            this.lastNameSearchButton.Name = "lastNameSearchButton";
+            this.lastNameSearchButton.Size = new System.Drawing.Size(75, 23);
+            this.lastNameSearchButton.TabIndex = 3;
+            this.lastNameSearchButton.Text = "Search";
+            this.lastNameSearchButton.UseVisualStyleBackColor = true;
+            this.lastNameSearchButton.Click += new System.EventHandler(this.lastNameSearchButton_Click);
+            // 
+            // SearchBoxLable
+            // 
+            this.SearchBoxLable.AutoSize = true;
+            this.SearchBoxLable.Location = new System.Drawing.Point(400, 0);
+            this.SearchBoxLable.Name = "SearchBoxLable";
+            this.SearchBoxLable.Size = new System.Drawing.Size(103, 13);
+            this.SearchBoxLable.TabIndex = 4;
+            this.SearchBoxLable.Text = "Search by last name";
             // 
             // DisplayAuthorsTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1769, 632);
+            this.ClientSize = new System.Drawing.Size(758, 283);
+            this.Controls.Add(this.SearchBoxLable);
+            this.Controls.Add(this.lastNameSearchButton);
+            this.Controls.Add(this.lastNameSearchBox);
             this.Controls.Add(this.authorDataGridView);
             this.Controls.Add(this.authorBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "DisplayAuthorsTable";
             this.Text = "Display Authors Table";
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingNavigator)).EndInit();
             this.authorBindingNavigator.ResumeLayout(false);
             this.authorBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.authorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +300,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.TextBox lastNameSearchBox;
+        private System.Windows.Forms.Button lastNameSearchButton;
+        public System.Windows.Forms.Label SearchBoxLable;
     }
 }
 
