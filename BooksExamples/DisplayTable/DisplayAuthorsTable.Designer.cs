@@ -51,6 +51,7 @@
             this.lastNameSearchBox = new System.Windows.Forms.TextBox();
             this.lastNameSearchButton = new System.Windows.Forms.Button();
             this.SearchBoxLable = new System.Windows.Forms.Label();
+            this.browesAllButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingNavigator)).BeginInit();
             this.authorBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
@@ -83,7 +84,7 @@
             this.authorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.authorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.authorBindingNavigator.Name = "authorBindingNavigator";
-            this.authorBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.authorBindingNavigator.Padding = new System.Windows.Forms.Padding(0);
             this.authorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.authorBindingNavigator.Size = new System.Drawing.Size(758, 43);
             this.authorBindingNavigator.TabIndex = 0;
@@ -200,7 +201,7 @@
             this.authorDataGridView.DataSource = this.authorBindingSource;
             this.authorDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.authorDataGridView.Location = new System.Drawing.Point(0, 43);
-            this.authorDataGridView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.authorDataGridView.Margin = new System.Windows.Forms.Padding(1);
             this.authorDataGridView.Name = "authorDataGridView";
             this.authorDataGridView.RowTemplate.Height = 37;
             this.authorDataGridView.Size = new System.Drawing.Size(758, 240);
@@ -257,17 +258,28 @@
             this.SearchBoxLable.TabIndex = 4;
             this.SearchBoxLable.Text = "Search by last name";
             // 
+            // browesAllButton
+            // 
+            this.browesAllButton.Location = new System.Drawing.Point(636, 10);
+            this.browesAllButton.Name = "browesAllButton";
+            this.browesAllButton.Size = new System.Drawing.Size(75, 23);
+            this.browesAllButton.TabIndex = 5;
+            this.browesAllButton.Text = "Browse All";
+            this.browesAllButton.UseVisualStyleBackColor = true;
+            this.browesAllButton.Click += new System.EventHandler(this.browesAllButton_Click);
+            // 
             // DisplayAuthorsTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 283);
+            this.Controls.Add(this.browesAllButton);
             this.Controls.Add(this.SearchBoxLable);
             this.Controls.Add(this.lastNameSearchButton);
             this.Controls.Add(this.lastNameSearchBox);
             this.Controls.Add(this.authorDataGridView);
             this.Controls.Add(this.authorBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "DisplayAuthorsTable";
             this.Text = "Display Authors Table";
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingNavigator)).EndInit();
@@ -303,6 +315,7 @@
         private System.Windows.Forms.TextBox lastNameSearchBox;
         private System.Windows.Forms.Button lastNameSearchButton;
         public System.Windows.Forms.Label SearchBoxLable;
+        private System.Windows.Forms.Button browesAllButton;
     }
 }
 

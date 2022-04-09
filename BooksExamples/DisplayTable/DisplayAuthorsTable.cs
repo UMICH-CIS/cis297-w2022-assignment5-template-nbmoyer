@@ -60,12 +60,31 @@ namespace DisplayTable
 
         private void lastNameSearchButton_Click(object sender, EventArgs e)
         {
-            
+            string lastName = lastNameSearchBox.Text;
+
+            var lastNameQuery =
+            from Authors in dbcontext.Authors
+            where Authors.LastName.StartsWith(lastNameSearchBox.Text)
+            orderby Authors.LastName, Authors.FirstName
+            select Authors;
+
+            //addressBindingSource.DataSource = lastNameQuery.ToList();
+            //addressBindingSource.MoveFirst();
+
+            bindingNavigatorAddNewItem.Enabled = false;
+            bindingNavigatorDeleteItem.Enabled = false;
+
         }
 
         private void lastNameSearchBox_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        
+        private void browesAllButton_Click(object sender, EventArgs e)
+        {
+            lastNameSearchBox.Text = "";
         }
     }
 }
